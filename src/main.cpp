@@ -1,4 +1,7 @@
-#include "pico/stdlib.h"
+#include <FreeRTOS.h>
+#include <FreeRTOSConfig.h>
+#include <task.h>
+
 #include <main.h>
 
 int main() {
