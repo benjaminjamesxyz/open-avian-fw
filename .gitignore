@@ -43,3 +43,7 @@ pico-sdk/
 pioasm/
 rpi-pioc.*
 Makefile
+.cache/
+.DS_Store
+build/
+out/
