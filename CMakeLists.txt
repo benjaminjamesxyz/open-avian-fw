@@ -1,5 +1,6 @@
 cmake_minimum_required(VERSION 3.13)
 set(PICO_SDK_FETCH_FROM_GIT on)
+set(PICO_BOARD pico_w)
 set(FREERTOS_KERNEL_PATH ${CMAKE_CURRENT_SOURCE_DIR}/lib/FreeRTOS-Kernel)
 include(pico_sdk_import.cmake)
 include(${FREERTOS_KERNEL_PATH}/portable/ThirdParty/GCC/RP2040/FreeRTOS_Kernel_import.cmake)
@@ -31,6 +32,7 @@ add_executable(${PROJECT} ${${PROJECT}_SRC})
 
 target_link_libraries(${PROJECT}
                       pico_stdlib
+                      pico_cyw43_arch_none
                       hardware_i2c
                       pico_multicore
                       FreeRTOS
